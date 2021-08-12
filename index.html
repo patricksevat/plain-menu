@@ -4,7 +4,6 @@
                 href="global.css"
                 rel="stylesheet"
         />
-        <script src="script.js"></script>
         <title>A plain menu</title>
     </head>
     <body>
@@ -13,11 +12,11 @@
         <nav>
             <div role="menubar">
                 <div role="menuitem" class="nav-item" aria-haspopup="true">
-                    <span>Item 1</span>
-                    <div role="menu" class="nav-item__submenu">
-                        <div role="menuitem" class="nav-sub-item"></div>
-                        <div role="menuitem" class="nav-sub-item"></div>
-                        <div role="menuitem" class="nav-sub-item"></div>
+                    <span class="nav-item__text">Item 1</span>
+                    <div role="menu" class="nav-item__submenu" hidden aria-hidden="true">
+                        <div role="menuitem" class="nav-sub-item">Sub-item 1</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 2</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 3</div>
                     </div>
 
                 </div>
@@ -26,6 +25,9 @@
 
         </nav>
     </main>
+    <footer>
+        <script src="script.js"></script>
+    </footer>
     </body>
 </html>
 

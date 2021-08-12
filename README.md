@@ -28,3 +28,5 @@
 - 19:30 - 20:00: 
 Setting up some boilerplate. 
 Reading up on HTML structure/elements and ARIA roles (yes really, I don't often write HTML from scratch 😅)
+- 20:00 - 20:15
+Click menu-item logic
