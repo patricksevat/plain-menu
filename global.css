@@ -1,0 +1,9 @@
+#skip-to-main-content {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+#skip-to-main-content:focus {
+    height: auto;
+}
