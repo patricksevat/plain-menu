@@ -25,3 +25,19 @@ function addClickListenersToMenuItems() {
   })
 }
 
+function toggleCssTheme (newTheme) {
+  const body = document.body;
+  const toggleLightModeButton = document.querySelector('#toggle-light-mode');
+  const toggleDarkModeButton = document.querySelector('#toggle-dark-mode');
+
+  if(newTheme === 'light') {
+    body.removeAttribute('dark');
+    toggleLightModeButton.setAttribute('hidden', '');
+    toggleDarkModeButton.removeAttribute('hidden');
+  } else {
+    body.setAttribute('dark', 'true');
+    toggleLightModeButton.removeAttribute('hidden');
+    toggleDarkModeButton.setAttribute('hidden', '')
+  }
+}
+

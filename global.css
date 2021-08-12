@@ -1,3 +1,25 @@
+/* VARS start*/
+body {
+    --bg-primary: #F4F9F9;
+    --bg-secondary: #CCF2F4;
+    --text-primary: #AAAAAA;
+}
+
+body[dark="true"] {
+    --bg-primary: #0F044C;
+    --bg-secondary: #141E61;
+    --text-primary: #EEEEEE;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* VARS end*/
+
+/* SKIP LINK start */
+
 #skip-to-main-content {
     display: block;
     height: 0;
@@ -7,3 +29,13 @@
 #skip-to-main-content:focus {
     height: auto;
 }
+
+/* SKIP LINK end */
+
+/* NAV start*/
+
+/* NAV end*/
+
+/* MAIN start*/
+
+/* MAIN end*/

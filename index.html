@@ -7,8 +7,7 @@
         <title>A plain menu</title>
     </head>
     <body>
-    <a id="skip-to-main-content" href="#main">Skip navigation to main content</a>
-    <main id="main">
+        <a id="skip-to-main-content" href="#main">Skip navigation to main content</a>
         <nav>
             <div role="menubar">
                 <div role="menuitem" class="nav-item" aria-haspopup="true">
@@ -18,16 +17,33 @@
                         <div role="menuitem" class="nav-sub-item">Sub-item 2</div>
                         <div role="menuitem" class="nav-sub-item">Sub-item 3</div>
                     </div>
-
                 </div>
-                <!-- TODO copy nav-item -->
+                <div role="menuitem" class="nav-item" aria-haspopup="true">
+                    <span class="nav-item__text">Item 2</span>
+                    <div role="menu" class="nav-item__submenu" hidden aria-hidden="true">
+                        <div role="menuitem" class="nav-sub-item">Sub-item 1</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 2</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 3</div>
+                    </div>
+                </div>
+                <div role="menuitem" class="nav-item" aria-haspopup="true">
+                    <span class="nav-item__text">Item 3</span>
+                    <div role="menu" class="nav-item__submenu" hidden aria-hidden="true">
+                        <div role="menuitem" class="nav-sub-item">Sub-item 1</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 2</div>
+                        <div role="menuitem" class="nav-sub-item">Sub-item 3</div>
+                    </div>
+                </div>
             </div>
-
+            <button id="toggle-light-mode" onclick="toggleCssTheme('light')" hidden>🌚</button>
+            <button id="toggle-dark-mode" onclick="toggleCssTheme('dark')">☀️</button>
         </nav>
-    </main>
-    <footer>
-        <script src="script.js"></script>
-    </footer>
+        <main id="main">
+
+        </main>
+        <footer>
+            <script src="script.js"></script>
+        </footer>
     </body>
 </html>
 

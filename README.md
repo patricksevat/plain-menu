@@ -30,3 +30,5 @@ Setting up some boilerplate.
 Reading up on HTML structure/elements and ARIA roles (yes really, I don't often write HTML from scratch 😅)
 - 20:00 - 20:15
 Click menu-item logic
+- 20:15 - 20:40
+Dark / light mode implementation
