@@ -3,6 +3,7 @@ body {
     --bg-primary: #F4F9F9;
     --bg-secondary: #CCF2F4;
     --bg-tertiary: #A4EBF3;
+    --bg-neutral: #fff;
     --text-primary: #0F044C;
 
     --font-size-modifier: 1;
@@ -12,12 +13,15 @@ body {
     --padding-md: 8px;
     --padding-lg: 16px;
     --padding-xl: 24px;
+
+    --border-radius: 5px;
 }
 
 body[dark="true"] {
     --bg-primary: #0F044C;
     --bg-secondary: #141E61;
     --bg-tertiary: #787A91;
+    --bg-neutral: #000;
     --text-primary: #EEEEEE;
 }
 
@@ -84,12 +88,46 @@ nav {
 }
 
 .menu-item {
-    padding: var(--padding-lg);
+    position: relative;
 }
 
-.menu-item:hover {
+.menu-item:focus {
+    border: 1px solid var(--bg-tertiary);
+}
+
+.menu-item__text {
+    display: block;
+    padding: var(--padding-lg);
+    position: relative;
+}
+
+.menu-item__text:hover {
     background: var(--bg-tertiary);
     cursor: pointer;
+}
+
+.menu-item__submenu {
+    position: absolute;
+    top: 90%;
+
+    background: var(--bg-neutral);
+    border: 1px solid var(--bg-secondary);
+    border-radius: var(--border-radius);
+
+    width: 100px;
+}
+
+.menu-item__submenu-item {
+    padding: var(--padding-md);
+    cursor: pointer;
+}
+
+.menu-item__submenu-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.menu-item__submenu-item:not(:first-child) {
+    border-top: 1px solid var(--bg-tertiary);
 }
 
 /* NAV end*/
