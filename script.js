@@ -7,7 +7,7 @@
 function toggleSubmenu (clickEvent) {
   const spanElement = clickEvent.target;
   const menuItem = spanElement.parentElement;
-  const subMenu = menuItem.querySelector('.nav-item__submenu');
+  const subMenu = menuItem.querySelector('.menu-item__submenu');
 
   if(subMenu.hasAttribute('hidden')) {
     subMenu.removeAttribute('hidden');
@@ -19,7 +19,7 @@ function toggleSubmenu (clickEvent) {
 }
 
 function addClickListenersToMenuItems() {
-  const menuItems = document.querySelectorAll('.nav-item__text');
+  const menuItems = document.querySelectorAll('.menu-item__text');
   menuItems.forEach(menuItem => {
     menuItem.addEventListener('click', toggleSubmenu);
   })
