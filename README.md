@@ -43,4 +43,6 @@ Start styling the nav-bar
 Baby woke up at 14:45, WIP commit
 16:45 - 17:00
 Finish basic styling
+17:00 - 17:50
+Finish all styling & keyboard navigation
 
