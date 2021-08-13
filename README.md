@@ -41,4 +41,6 @@ Dark / light mode implementation
 14:30 - 14:45
 Start styling the nav-bar
 Baby woke up at 14:45, WIP commit
+16:45 - 17:00
+Finish basic styling
 

@@ -2,6 +2,7 @@
 body {
     --bg-primary: #F4F9F9;
     --bg-secondary: #CCF2F4;
+    --bg-tertiary: #A4EBF3;
     --text-primary: #0F044C;
 
     --font-size-modifier: 1;
@@ -10,11 +11,13 @@ body {
     --padding-sm: 4px;
     --padding-md: 8px;
     --padding-lg: 16px;
+    --padding-xl: 24px;
 }
 
 body[dark="true"] {
     --bg-primary: #0F044C;
     --bg-secondary: #141E61;
+    --bg-tertiary: #787A91;
     --text-primary: #EEEEEE;
 }
 
@@ -59,16 +62,19 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 var(--padding-md);
 
     background: var(--bg-secondary);
     color: var(--text-primary);
 
-    padding: var(--padding-md);
+    font-family: sans-serif;
 }
 
 .toggle-theme-button {
-    align-self: end;
-
+    display: flex;
+    align-self: center;
+    font-size: calc(22px * var(--font-size-modifier));
+    cursor: pointer;
 }
 
 #menu {
@@ -77,13 +83,25 @@ nav {
     align-items: center;
 }
 
+.menu-item {
+    padding: var(--padding-lg);
+}
+
+.menu-item:hover {
+    background: var(--bg-tertiary);
+    cursor: pointer;
+}
+
 /* NAV end*/
 
 /* MAIN start*/
 
 main {
     color: var(--text-primary);
+
     font-size: calc(14px * var(--font-size-modifier));
+
+    padding: var(--padding-xl);
 }
 
 /* MAIN end*/
