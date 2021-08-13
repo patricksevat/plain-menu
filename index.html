@@ -9,7 +9,7 @@
     <body>
         <a id="skip-to-main-content" href="#main">Skip navigation to main content</a>
         <nav>
-            <div role="menubar">
+            <div id="menu" role="menubar">
                 <div role="menuitem" class="nav-item" aria-haspopup="true">
                     <span class="nav-item__text">Item 1</span>
                     <div role="menu" class="nav-item__submenu" hidden aria-hidden="true">
@@ -35,11 +35,11 @@
                     </div>
                 </div>
             </div>
-            <button id="toggle-light-mode" onclick="toggleCssTheme('light')" hidden>🌚</button>
-            <button id="toggle-dark-mode" onclick="toggleCssTheme('dark')">☀️</button>
+            <button class="toggle-theme-button" id="toggle-light-mode" onclick="toggleCssTheme('light')" hidden>🌚</button>
+            <button class="toggle-theme-button" id="toggle-dark-mode" onclick="toggleCssTheme('dark')">☀️</button>
         </nav>
         <main id="main">
-
+            <p>Lorem ipsum</p>
         </main>
         <footer>
             <script src="script.js"></script>

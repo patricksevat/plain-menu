@@ -2,7 +2,14 @@
 body {
     --bg-primary: #F4F9F9;
     --bg-secondary: #CCF2F4;
-    --text-primary: #AAAAAA;
+    --text-primary: #0F044C;
+
+    --font-size-modifier: 1;
+
+    --padding-xs: 2px;
+    --padding-sm: 4px;
+    --padding-md: 8px;
+    --padding-lg: 16px;
 }
 
 body[dark="true"] {
@@ -11,12 +18,27 @@ body[dark="true"] {
     --text-primary: #EEEEEE;
 }
 
+/* VARS end*/
+
+/* BODY start */
+
 body {
     background: var(--bg-primary);
     color: var(--text-primary);
+
+    margin: 0;
 }
 
-/* VARS end*/
+/* Modern browser way of doing a clearfix */
+button {
+    all: unset
+}
+
+button[hidden] {
+    display: none;
+}
+
+/* BODY end */
 
 /* SKIP LINK start */
 
@@ -33,9 +55,35 @@ body {
 /* SKIP LINK end */
 
 /* NAV start*/
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+
+    padding: var(--padding-md);
+}
+
+.toggle-theme-button {
+    align-self: end;
+
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 /* NAV end*/
 
 /* MAIN start*/
+
+main {
+    color: var(--text-primary);
+    font-size: calc(14px * var(--font-size-modifier));
+}
 
 /* MAIN end*/

@@ -13,9 +13,13 @@
 ## Requirements
 
 - Accessible
+    - Skip link
+    - Keyboard nav
+    - Contrast ✅
 - CSS vars for theming
 - Semantic HTML
 - Simple CSS keyframe animation
+- Responsive (only if time left later)
 
 ## Out of scope
 
@@ -32,3 +36,9 @@ Reading up on HTML structure/elements and ARIA roles (yes really, I don't often 
 Click menu-item logic
 - 20:15 - 20:40
 Dark / light mode implementation
+
+### August, 13th
+14:30 - 14:45
+Start styling the nav-bar
+Baby woke up at 14:45, WIP commit
+
