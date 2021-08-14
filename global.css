@@ -15,6 +15,9 @@ body {
     --padding-xl: 24px;
 
     --border-radius: 5px;
+
+    --nav-height: 50px;
+    --footer-height: 50px;
 }
 
 body[dark="true"] {
@@ -29,10 +32,15 @@ body[dark="true"] {
 
 /* BODY start */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: var(--bg-primary);
     color: var(--text-primary);
 
+    position: relative;
     margin: 0;
 }
 
@@ -67,6 +75,9 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 var(--padding-md);
+    height: var(--nav-height);
+    width: 100vw;
+    position: absolute;
 
     background: var(--bg-secondary);
     color: var(--text-primary);
@@ -139,7 +150,27 @@ main {
 
     font-size: calc(14px * var(--font-size-modifier));
 
+    height: 100%;
+    padding-top: var(--nav-height);
+}
+
+main article {
     padding: var(--padding-xl);
+    /* Uncomment to see footer being pushed down */
+    /*height: 2000px;*/
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 }
 
 /* MAIN end*/
+
+/* FOOTER start */
+footer {
+    height: var(--nav-height);
+    width: 100vw;
+
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+
+    padding: var(--padding-lg);
+    font-family: sans-serif;
+}
