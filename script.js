@@ -7,12 +7,27 @@ const selectors = {
 function addKeyboardEventListeners() {
   document.addEventListener('keyup', function (keyboardEvent) {
     if(keyboardEvent.key === 'Enter' || keyboardEvent.code === 'Space') {
-      const activeElement = document.activeElement;
-      if(activeElement.getAttribute('tabindex') === '0') {
-        activeElement.dispatchEvent(new Event('click'));
-      }
+      handleEnterAndSpaceKey(keyboardEvent);
+    } else if(keyboardEvent.key === 'Tab') {
+      handleTabKey(keyboardEvent);
     }
   })
+}
+
+function handleEnterAndSpaceKey (keyboardEvent) {
+  const activeElement = document.activeElement;
+  if(activeElement.getAttribute('tabindex') === '0') {
+    activeElement.dispatchEvent(new Event('click'));
+  }
+}
+
+function handleTabKey (keyboardEvent) {
+  console.log(document.activeElement.classList)
+  if(document.activeElement.classList.contains('menu-item__text')
+    && !document.activeElement.classList.contains('menu-item__text--first')
+  ) {
+    closeOpenSubMenus();
+  }
 }
 
 function addClickListenersToSubMenuItems () {
@@ -26,6 +41,7 @@ function alertOnSubMenuItemClick (clickEvent) {
   const subMenuItem = clickEvent.target;
   alert(subMenuItem.innerText);
 }
+
 function addClickListenersToMenuItems() {
   const menuItems = document.querySelectorAll(selectors.menuItemText);
   menuItems.forEach(menuItem => {
@@ -39,15 +55,28 @@ function toggleSubmenu (clickEvent) {
   const subMenu = menuItem.querySelector(selectors.subMenu);
 
   if(subMenu.hasAttribute('hidden')) {
-    // TODO close open submenus
-    subMenu.removeAttribute('hidden');
-    subMenu.removeAttribute('aria-hidden');
-    addSubMenuItemTabIndices(subMenu);
+    closeOpenSubMenus();
+    openSubMenu(subMenu)
   } else {
-    subMenu.setAttribute('hidden', '');
-    subMenu.setAttribute('aria-hidden', 'true');
-    removeSubMenuItemTabIndices(subMenu);
+    closeSubMenu(subMenu)
   }
+}
+
+function closeOpenSubMenus () {
+  const openSubMenus = document.querySelectorAll('.menu-item__submenu:not([hidden])');
+  openSubMenus.forEach(closeSubMenu);
+}
+
+function openSubMenu (subMenu) {
+  subMenu.removeAttribute('hidden');
+  subMenu.removeAttribute('aria-hidden');
+  addSubMenuItemTabIndices(subMenu);
+}
+
+function closeSubMenu (subMenu) {
+  subMenu.setAttribute('hidden', '');
+  subMenu.setAttribute('aria-hidden', 'true');
+  removeSubMenuItemTabIndices(subMenu);
 }
 
 function removeSubMenuItemTabIndices (htmlElement) {

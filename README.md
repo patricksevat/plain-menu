@@ -13,11 +13,11 @@
 ## Requirements
 
 - Accessible
-    - Skip link
-    - Keyboard nav
+    - Skip link ✅
+    - Keyboard nav ✅
     - Contrast ✅
-- CSS vars for theming
-- Semantic HTML
+- CSS vars for theming ✅
+- Semantic HTML ✅ (sorta)
 - Simple CSS keyframe animation
 - Responsive (only if time left later)
 
@@ -46,3 +46,6 @@ Finish basic styling
 17:00 - 17:50
 Finish all styling & keyboard navigation
 
+### August, 14th
+13:45 - 14:00
+Close open sub menus when opening a new one
