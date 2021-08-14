@@ -117,7 +117,7 @@ nav {
     cursor: pointer;
 }
 
-.menu-item__submenu {
+.menu-item__submenu:not([hidden]) {
     position: absolute;
     top: 90%;
 
@@ -126,6 +126,17 @@ nav {
     border-radius: var(--border-radius);
 
     width: 100px;
+
+    animation-name: fadeIn;
+    animation-duration: .3s;
+}
+
+.menu-item__submenu[hidden] {
+    /* An opacity based fadeout animation will not work due to the browser being quite strict in the
+    [hidden] property. Will work when refactoring to a .hidden class
+    */
+    /*animation-name: fadeOut;*/
+    /*animation-duration: .3s;*/
 }
 
 .menu-item__submenu-item {
@@ -173,4 +184,13 @@ footer {
 
     padding: var(--padding-lg);
     font-family: sans-serif;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    40% { opacity: 0.3; }
+    60% { opacity: 0.5; }
+    80% { opacity: 0.9; }
+    100% { opacity: 1 }
 }

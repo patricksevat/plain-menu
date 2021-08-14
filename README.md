@@ -51,3 +51,5 @@ Finish all styling & keyboard navigation
 Close open sub menus when opening a new one
 14:00 - 14:30
 Start & finish sticky footer
+14:30 - 14:50
+Animation
