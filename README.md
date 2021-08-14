@@ -18,13 +18,13 @@
     - Contrast ✅
 - CSS vars for theming ✅
 - Semantic HTML ✅ (sorta)
-- Simple CSS keyframe animation
-- Responsive (only if time left later)
+- Simple CSS keyframe animation ✅
+- Responsive (only if time left later) ❌
 
 ## Out of scope
 
-- Translations
-- (Unit) tests
+- Translations ❌
+- (Unit) tests ❌
 
 ## Time tracker
 
