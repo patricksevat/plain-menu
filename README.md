@@ -1,4 +1,10 @@
-# Objective
+# Plain menu
+
+## How to open
+
+Simply clone the repo and open the index.html file with your favorite browser
+
+## Objective
 
 0. Page shows Lorem ipsum ✅
 1. Create menu ✅
